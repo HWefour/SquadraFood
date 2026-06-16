@@ -6,14 +6,14 @@ export function Hero({ onNav }) {
       <div className="sf-hero-bg" />
       <div className="sf-hero-grid">
         <div className="sf-hero-copy">
-          <span className="sf-eyebrow">★ Street food · Lyon ★</span>
+          <span className="sf-eyebrow">★ Street food · Vendargues ★</span>
           <h1 className="sf-hero-title">
             LE TACOS<br />
             <span className="sf-hl">GRATINÉ</span><br />
             QUI DÉCHIRE
           </h1>
           <p className="sf-hero-sub">
-            {SF_INFO.slogan}. Tacos lyonnais, smash burgers et sandwichs faits minute.
+            {SF_INFO.slogan}. Tacos gratinés, smash burgers et sandwichs faits minute à Vendargues.
             Commandez en ligne, récupérez en boutique.
           </p>
           <div className="sf-hero-cta">

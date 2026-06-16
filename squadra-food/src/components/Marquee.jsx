@@ -1,5 +1,5 @@
 export function Marquee() {
-  const words = ['TACOS GRATINÉ', 'SMASH BURGERS', 'SANDWICHS', 'TEX MEX', 'FAIT MAISON', 'CLICK & COLLECT'];
+  const words = ['TACOS GRATINÉ', 'SMASH BURGERS', 'SANDWICHS', 'TEX MEX', 'FAIT MAISON', 'VENDARGUES'];
   const line = [...words, ...words];
   return (
     <div className="sf-marquee">

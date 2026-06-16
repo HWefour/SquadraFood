@@ -47,7 +47,7 @@ export function Checkout({ items, onClose, onPlaced }) {
         {step === 1 && (
           <div className="sf-checkout-body">
             <h3 className="sf-checkout-title">Click &amp; Collect</h3>
-            <p className="sf-checkout-sub">Retrait à {SF_INFO.address}</p>
+            <p className="sf-checkout-sub">Retrait au {SF_INFO.address}</p>
 
             <div className="sf-opt-label">Quand venez-vous ?</div>
             <div className="sf-slot-mode">

@@ -12,24 +12,9 @@ import { ProductModal } from './components/ProductModal';
 import { CartDrawer } from './components/CartDrawer';
 import { Checkout } from './components/Checkout';
 import { LegalView, CookieBanner } from './components/Legal';
-import { TweaksPanel, useTweaks, TweakSection, TweakColor, TweakRadio, TweakSlider, TweakToggle } from './components/TweaksPanel';
 import { eur } from './components/Menu';
 
-const SF_ACCENTS = {
-  jaune: ['#FAC012', '#ffd23f', '#d99a00'],
-  orange: ['#FF8A1E', '#ffab57', '#e0720a'],
-  soleil: ['#F4D03F', '#f9e07a', '#d4af1f'],
-};
-
-const TWEAK_DEFAULTS = {
-  accent: ['#FAC012', '#ffd23f', '#d99a00'],
-  displayFont: 'Anton',
-  radius: 24,
-  showBadges: true,
-};
-
 export default function App() {
-  const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
   const [cart, setCart] = useState(() => {
     try { return JSON.parse(localStorage.getItem('sf_cart') || '[]'); } catch { return []; }
   });
@@ -41,18 +26,6 @@ export default function App() {
   const [legal, setLegal] = useState(null);
 
   useEffect(() => { localStorage.setItem('sf_cart', JSON.stringify(cart)); }, [cart]);
-
-  useEffect(() => {
-    const r = document.documentElement;
-    const acc = Array.isArray(t.accent) ? t.accent : SF_ACCENTS.jaune;
-    r.style.setProperty('--gold', acc[0]);
-    r.style.setProperty('--gold-2', acc[1] || acc[0]);
-    r.style.setProperty('--gold-deep', acc[2] || acc[0]);
-    r.style.setProperty('--disp', `'${t.displayFont || 'Anton'}', sans-serif`);
-    r.style.setProperty('--r-lg', (t.radius ?? 24) + 'px');
-    r.style.setProperty('--r', Math.round((t.radius ?? 24) * 0.66) + 'px');
-    document.body.classList.toggle('sf-no-badges', !t.showBadges);
-  }, [t]);
 
   const count = cart.reduce((s, i) => s + i.qty, 0);
 
@@ -129,21 +102,6 @@ export default function App() {
 
       {legal && <LegalView doc={legal} onChange={setLegal} onClose={() => setLegal(null)} />}
       <CookieBanner onPolicy={() => setLegal('cookies')} />
-
-      <TweaksPanel title="Tweaks">
-        <TweakSection label="Identité" />
-        <TweakColor label="Couleur d'accent" value={t.accent}
-          options={[SF_ACCENTS.jaune, SF_ACCENTS.orange, SF_ACCENTS.soleil]}
-          onChange={(v) => setTweak('accent', v)} />
-        <TweakRadio label="Police des titres" value={t.displayFont}
-          options={['Anton', 'Bebas Neue', 'Archivo Black']}
-          onChange={(v) => setTweak('displayFont', v)} />
-        <TweakSection label="Style" />
-        <TweakSlider label="Arrondi des coins" value={t.radius} min={4} max={28} step={2} unit="px"
-          onChange={(v) => setTweak('radius', v)} />
-        <TweakToggle label="Badges produits" value={t.showBadges}
-          onChange={(v) => setTweak('showBadges', v)} />
-      </TweaksPanel>
     </div>
   );
 }

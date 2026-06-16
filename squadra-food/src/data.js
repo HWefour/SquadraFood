@@ -139,13 +139,13 @@ export const SF_MENU = [
 
 export const SF_INFO = {
   name: 'Squadra Food',
-  slogan: 'Le vrai tacos lyonnais gratiné',
-  address: '12 rue de la République, 69002 Lyon',
-  phone: '04 78 00 00 00',
+  slogan: 'Le vrai tacos gratiné de Vendargues',
+  address: '500 Route Départementale 613, 34740 Vendargues',
+  city: 'Vendargues',
+  phone: '07 45 48 02 20',
   hours: [
-    { d: 'Lun – Jeu', h: '11h30 – 14h30 · 18h30 – 23h00' },
-    { d: 'Ven – Sam', h: '11h30 – 14h30 · 18h30 – 00h00' },
-    { d: 'Dimanche', h: '18h30 – 23h00' },
+    { d: 'Lun – Sam', h: '12h00 – 14h30 · 19h00 – 00h00' },
+    { d: 'Dimanche', h: '19h00 – 00h00' },
   ],
   prepTime: 20,
 };
@@ -182,7 +182,7 @@ export const SF_LEGAL = {
       { h: 'Article 2 — Commande', p: ['Le client sélectionne ses produits, valide son panier puis choisit un créneau de retrait. La commande est ferme après confirmation et, le cas échéant, paiement en ligne.', 'Un récapitulatif est affiché et un email/SMS de confirmation est envoyé au client.'] },
       { h: 'Article 3 — Prix', p: ['Les prix sont indiqués en euros, toutes taxes comprises (TTC). {Raison sociale} se réserve le droit de modifier ses prix à tout moment ; les produits sont facturés sur la base des tarifs en vigueur au moment de la validation de la commande.'] },
       { h: 'Article 4 — Paiement', p: ['Le paiement s\'effectue en ligne par carte bancaire ou solution équivalente, ou sur place au moment du retrait selon l\'option choisie. La commande n\'est préparée qu\'après confirmation du paiement (le cas échéant).'] },
-      { h: 'Article 5 — Retrait des commandes', p: ['Les commandes sont à retirer à l\'adresse : 12 rue de la République, 69002 Lyon, au créneau indiqué. Les temps de préparation peuvent varier selon l\'affluence ; aucun délai de préparation n\'est garanti.', 'En cas de retard du client, {Raison sociale} ne saurait être tenue responsable de l\'altération des produits.'] },
+      { h: 'Article 5 — Retrait des commandes', p: ['Les commandes sont à retirer à l\'adresse : 500 Route Départementale 613, 34740 Vendargues, au créneau indiqué. Les temps de préparation peuvent varier selon l\'affluence ; aucun délai de préparation n\'est garanti.', 'En cas de retard du client, {Raison sociale} ne saurait être tenue responsable de l\'altération des produits.'] },
       { h: 'Article 6 — Droit de rétractation', p: ['Conformément à l\'article L.221-28 du Code de la consommation, le droit de rétractation ne s\'applique pas aux denrées alimentaires périssables, susceptibles de se détériorer rapidement.'] },
       { h: 'Article 7 — Allergènes & informations produits', p: ['La liste des allergènes est disponible en boutique et sur demande. Il appartient au client de signaler toute allergie avant commande.'] },
       { h: 'Article 8 — Réclamations & litiges', p: ['Toute réclamation peut être adressée à {email@squadrafood.fr}. À défaut de solution amiable, le client peut recourir gratuitement au médiateur de la consommation {Nom du médiateur}. Les présentes CGV sont soumises au droit français.'] },
