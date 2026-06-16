@@ -144,7 +144,8 @@ export const SF_INFO = {
   city: 'Vendargues',
   phone: '07 45 48 02 20',
   hours: [
-    { d: 'Lun – Sam', h: '12h00 – 14h30 · 19h00 – 00h00' },
+    { d: 'Lun – Jeu', h: '19h00 – 00h00' },
+    { d: 'Ven – Sam', h: '19h00 – 02h00' },
     { d: 'Dimanche', h: '19h00 – 00h00' },
   ],
   prepTime: 20,
